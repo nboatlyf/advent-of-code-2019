@@ -11,6 +11,7 @@ namespace Day_4
         public int Value { get; }
         public int NumberOfDigits { get; }
 
+
         public NumberAsDigits(params int[] digits)
         {
             NumberOfDigits = digits.Length;
@@ -26,6 +27,7 @@ namespace Day_4
             }
         }
 
+        // Checks if there are any sequences of repeated digits of length 2 or more.
         public bool Has2OrMoreConsecutiveEqualDigits()
         {
             bool returnBool = false;
@@ -41,7 +43,8 @@ namespace Day_4
 
             return returnBool;
         }
-
+        
+        // Checks if there are any sequences of repeated digits of length 3 or more.
         public bool Has3OrMoreConsecutiveEqualDigits()
         {
             bool returnBool = false;
@@ -59,6 +62,7 @@ namespace Day_4
             return returnBool;
         }
 
+        // Checks if there is at least one sequence of repeated digits of length exactly 2.
         public bool HasSequenceOfExactly2ConsecutiveEqualDigits()
         {
             bool returnBool = false;
@@ -90,6 +94,7 @@ namespace Day_4
             return returnBool;
         }
 
+        // Checks if the digits are non-decreasing (a.k.a. weakly increasing).
         public bool AreDigitsNonDecreasing()
         {
             bool returnBool = true;

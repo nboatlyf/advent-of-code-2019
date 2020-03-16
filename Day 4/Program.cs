@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Day_4
 {
@@ -10,8 +11,10 @@ namespace Day_4
             Console.WriteLine("=====");
             Console.WriteLine("\n");
 
-            new PartOne().Calculate();
-            new PartTwo().Calculate();
+            var validNumbers = new ProcessInput().CreateListOfNumbersAsDigits(125730, 579381);
+
+            new PartOne().Calculate(validNumbers);
+            new PartTwo().Calculate(validNumbers);
 
             Console.ReadKey();
         }
