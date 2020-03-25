@@ -5,14 +5,14 @@ using System.Linq;
 
 namespace Day_4
 {
-    class PartOne : NumberAsDigits
+    class PartOne
     {
-        public void Calculate(List<NumberAsDigits> integersAsDigits)
+        public void Calculate(IEnumerable<NumberAsDigits> integersAsDigits)
         {
 
             var validPasswords = integersAsDigits
                 .Where(x => x.Has2OrMoreConsecutiveEqualDigits())
-                .Where(x => x.AreDigitsNonDecreasing());
+                .Where(x => x.AreDigitsWeaklyIncreasing());
 
             int validPasswordsCount = validPasswords.Count();
 
